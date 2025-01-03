@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcQdgwqAAAAAD-9CMYgxUWpAQ_-usuKaahZsBqV"></script>
+    <script>
+      function generateToken() {
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LcQdgwqAAAAAD-9CMYgxUWpAQ_-usuKaahZsBqV', { action: 'submit' }).then(function(token) {
+            window.ReactNativeWebView.postMessage(token);
+          });
+        });
+      }
+    </script>
+  </head>
+  <body onload="generateToken()">
+  </body>
+</html>
